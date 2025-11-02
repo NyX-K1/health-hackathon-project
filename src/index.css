@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Warm, natural healthcare colors */
+    --background: 210 30% 98%;
+    --foreground: 215 25% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 20%;
+
+    /* Soft, calming blue - trustworthy and approachable */
+    --primary: 200 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 200 60% 70%;
+    --primary-glow: 200 60% 85%;
+
+    /* Gentle green - health and growth */
+    --secondary: 150 45% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 150 40% 70%;
+
+    --muted: 210 25% 95%;
+    --muted-foreground: 215 20% 50%;
+
+    /* Soft accent */
+    --accent: 150 40% 92%;
+    --accent-foreground: 150 50% 30%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 200 70% 55%;
+
+    --radius: 0.75rem;
+    
+    /* Soft, natural shadows */
+    --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.15);
+    
+    /* Gentle, natural gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 70% 55%), hsl(200 60% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(150 45% 55%), hsl(150 50% 65%));
+    --gradient-hero: linear-gradient(180deg, hsl(200 60% 96%), hsl(0 0% 100%));
+    
+    /* Shadows for depth */
+    --shadow-card: 0 2px 12px -2px hsl(215 25% 20% / 0.08);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 25% 12%;
+    --foreground: 210 30% 96%;
+
+    --card: 220 25% 14%;
+    --card-foreground: 210 30% 96%;
+
+    --popover: 220 25% 14%;
+    --popover-foreground: 210 30% 96%;
+
+    --primary: 200 65% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 200 60% 65%;
+    --primary-glow: 200 60% 80%;
+
+    --secondary: 150 40% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 150 40% 65%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 215 20% 60%;
+
+    --accent: 150 35% 25%;
+    --accent-foreground: 150 45% 85%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 22%;
+    --input: 220 20% 22%;
+    --ring: 200 65% 50%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(200 65% 50%), hsl(200 55% 60%));
+    --gradient-primary: linear-gradient(135deg, hsl(200 65% 50%), hsl(200 60% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(150 40% 50%), hsl(150 45% 60%));
+    
+    --shadow-card: 0 2px 12px -2px hsl(0 0% 0% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
